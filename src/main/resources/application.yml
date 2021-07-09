@@ -1,0 +1,20 @@
+# Spring Security configuration
+security:
+  oauth2:
+    client:
+      clientId: ca9cc763-c7c1-42ab-9d0e-36e4c7e59d1b
+      clientSecret: prCy9xH_B_hhzN2bJ5rL.5Y2G~gROex1o3
+      accessTokenUri: https://login.microsoftonline.com/organizations/oauth2/v2.0/token
+      userAuthorizationUri: https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize
+      clientAuthenticationScheme: form
+      tokenName: oauth_token
+      grantType: authorization_code
+      scope:
+        - openid
+        - profile
+    resource:
+      userInfoUri: https://graph.microsoft.com/oidc/userinfo
+   
+# Server configuration
+server:
+  port: 8181
